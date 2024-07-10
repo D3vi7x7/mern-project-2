@@ -16,6 +16,14 @@ const Right = () => {
                 <p><span>Hello, Everyone.</span></p> 
                 <p>How can I help you today ?</p>
             </div>
+            <div className="cards">
+                <div className="card">
+                    <img src={assets.bulb_icon} alt="" />
+                    <p>Give me some tips to save electricity</p>
+                </div>
+                <div className="card"></div>
+                <div className="card"></div>
+            </div>
         </div>
     </div>
   )
