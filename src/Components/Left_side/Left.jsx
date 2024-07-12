@@ -1,8 +1,11 @@
-import React, { useState } from 'react'
+import React, { useContext, useState } from 'react'
 import './Left.css'
 import {assets} from '../../assets/assets.js'
+import { Context } from '../../Context/Context.jsx'
 
 const Left = () => {
+
+  const {newChat} = useContext(Context);
 
   const [breadth,setBreadth] = useState(false);
 
@@ -11,7 +14,7 @@ const Left = () => {
       <div>
       <img src={assets.menu_icon} alt="" className='menu' onClick={() => setBreadth(prev => !prev)}/>
       <div className='newchat'>
-        <img src={assets.plus_icon} alt="" />
+        <img onClick={newChat} src={assets.plus_icon} alt="" />
         {breadth?<p>New Chat</p>:null}
       </div>
       {breadth?<div className="recent">
